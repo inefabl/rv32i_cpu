@@ -37,7 +37,7 @@ module alu_ctrl(
         case(funct3)
             // SLLI
             `FUNCT3_ALU_SLL:begin
-                if (funct7 = 7'b0000000)    op_imm_funct = `ALU_SLL;
+                if (funct7 == 7'b0000000)   op_imm_funct = `ALU_SLL;
                 else                        op_imm_funct = `ALU_INVALID;
             end
 
@@ -69,13 +69,7 @@ module alu_ctrl(
         case(funct3)
             `FUNCT3_ALU_ADD_SUB:    secondary_funct = `ALU_SUB;
             `FUNCT3_ALU_SHIFTER:    secondary_funct = `ALU_SRA;
-            default:                secondary_funct = 4'bx;
-        endcase
-
-    always_comb
-        case(funct3)
-
-            default:                default_alu_funct = `ALU_INVALID;
+            default:                secondary_funct = `ALU_INVALID;
         endcase
 
 endmodule
