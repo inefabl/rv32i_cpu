@@ -1,0 +1,27 @@
+F:/FPGA/verilog/rv32i_cpu/rtl/tb_alu.sv {1 {vlog -work work -vopt -sv +incdir+F:/FPGA/verilog/rv32i_cpu/rtl/ALU -stats=none F:/FPGA/verilog/rv32i_cpu/rtl/tb_alu.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module tb_alu_ctrl
+
+Top level modules:
+	tb_alu_ctrl
+
+} {} {}} F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu.sv {1 {vlog -work work -vopt -sv -stats=none F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_ctrl
+-- Compiling module alu
+
+Top level modules:
+	alu_ctrl
+	alu
+
+} {} {}} F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu_ctrl.sv {1 {vlog -work work -vopt -sv -stats=none F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu_ctrl.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module alu_ctrl
+
+Top level modules:
+	alu_ctrl
+
+} {} {}} F:/FPGA/verilog/rv32i_cpu/rtl/ALU/constant.sv {1 {vlog -work work -vopt -sv -stats=none F:/FPGA/verilog/rv32i_cpu/rtl/ALU/constant.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+
+} {} {}}

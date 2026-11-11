@@ -1,0 +1,105 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/FPGA/verilog/breath_led/sim
+T_opt
+!s110 1794391117
+VCDfj82bU5zmV>VWO2YI902
+Z1 04 11 4 work tb_alu_ctrl fast 0
+=1-c4c6e69f9b5b-6af43c4c-115-100c
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+valu
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1794391029
+!i10b 1
+!s100 X=T230azo@Y];k>0fCV160
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IIn]<ik8;gkF=B9[S[B1BD1
+S1
+Z7 dF:/FPGA/verilog/rv32i_cpu/sim
+w1794327752
+8F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu.sv
+FF:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu.sv
+!i122 7
+L0 9 32
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z10 !s108 1794391029.000000
+!s107 F:\FPGA\verilog\rv32i_cpu\rtl\ALU\alu_ctrl.sv|F:\FPGA\verilog\rv32i_cpu\rtl\ALU\constant.sv|F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu.sv|
+!i113 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+valu_ctrl
+R4
+R5
+!i10b 1
+!s100 FgcjVJlgfK`Q`L^R<SBHe2
+R6
+IM><WKOTRUejNR8=fn[KTc3
+S1
+R7
+w1794388664
+8F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu_ctrl.sv
+FF:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu_ctrl.sv
+!i122 8
+L0 8 68
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 F:\FPGA\verilog\rv32i_cpu\rtl\ALU\constant.sv|F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu_ctrl.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|F:/FPGA/verilog/rv32i_cpu/rtl/ALU/alu_ctrl.sv|
+!i113 0
+R11
+R2
+vtb_alu_ctrl
+R4
+R5
+!i10b 1
+!s100 Db<OcW746UfHiSmoJZWbP3
+R6
+IXP1B???Hbb<35n>5M2B;V1
+S1
+R7
+w1794390558
+8F:/FPGA/verilog/rv32i_cpu/rtl/tb_alu.sv
+FF:/FPGA/verilog/rv32i_cpu/rtl/tb_alu.sv
+!i122 6
+L0 10 147
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 F:/FPGA/verilog/rv32i_cpu/rtl/ALU/constant.sv|F:/FPGA/verilog/rv32i_cpu/rtl/tb_alu.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|+incdir+F:/FPGA/verilog/rv32i_cpu/rtl/ALU|-stats=none|F:/FPGA/verilog/rv32i_cpu/rtl/tb_alu.sv|
+!i113 0
+R11
+!s92 -work work -sv +incdir+F:/FPGA/verilog/rv32i_cpu/rtl/ALU -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+Ttb_alu_ctrl_wave
+!s110 1794391198
+V?LE<;bOz6d[:n[DEe5i143
+R1
+o+acc
+R2
+ntb_alu_ctrl_wave
+R3

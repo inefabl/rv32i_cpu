@@ -6,46 +6,73 @@
 
 `timescale 1ns/1ps
 `include "constant.sv"
-`include "alu_ctrl.sv"
-`include "alu.sv"
 
 module tb_alu_ctrl;
     logic [6:0] funct7;
     logic [2:0] funct3;
     logic [1:0] alu_op_type;
-    
-    logic [31:0] a;
-    logic [31:0] b;
+    logic [3:0] alu_funct;
 
     alu_ctrl uut (
         .funct7      (funct7),
         .funct3      (funct3),
-        .alu_op_type (alu_op_type)
+        .alu_op_type (alu_op_type),
+        .alu_funct   (alu_funct)
     );
+
+    int error_count = 0;
+    int test_count = 0;
+
+    logic [31:0] a,b;
+    logic [31:0] result;
+    logic zero;
+
+    alu dut_alu (
+        .a          (a),
+        .b          (b),
+        .alu_op     (alu_funct),
+        .result     (result),
+        .zero       (zero)
+    )
 
     // 3. 自动检查任务
     task automatic check_case(
-        input string      test_name,
-        input logic [1:0] mode,
-        input logic [2:0] f3,
-        input logic [6:0] f7,
-        input logic [3:0] expected
+        input string        test_name,
+        input logic [1:0]   mode,
+        input logic [2:0]   f3,
+        input logic [6:0]   f7,
+        input logic [3:0]   expected,
+        input logic [31:0]  a_in,
+        input logic [31:0]  b_in,
+        input logic [31:0]  expected_result = 'x
     );
     begin
-        alu_op_type = mode;      
-        funct3      = f3;
-        funct7      = f7;
+
+        logic expected_zero;
+        bit   check_result;
+
+
+        alu_op_type   = mode;      
+        funct3        = f3;
+        funct7        = f7;
+        a             = a_in;
+        b             = b_in;
+        check_result  = (expected_zero != `ALU_INVALID);
+        expected_zero = (expected_result == 32'd0);
 
         #1; // 等待组合逻辑稳定
 
         test_count++;
 
-        if (alu_funct !== expected) begin
+        if (alu_funct !== expected || 
+        (check_result && ($isunknown(expected_result)  ||
+                            result !== expected_result ||
+                            zero != expected_zero))) begin
             error_count++;
-            $error(
-                "[FAIL] %s: expected=%b, actual=%b",
-                test_name, expected, alu_funct
-            );
+            $error("[FAIL] %s: op=%b expected=%b result=%h exp=%h, zeor=%b exp=%b,"
+                    test_name, alu_funct, expected,
+                    result, expected_result, zero, expected_zero);
+
         end
         else begin
             $display("[PASS] %s", test_name);
