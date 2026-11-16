@@ -20,7 +20,7 @@ module register #(
     output logic    [WIDTH-1:0]     value
 );
 
-    inital value = INITIAL;
+    initial value = INITIAL;
 
     always_ff@(posedge clock or posedge reset)
         if (reset)              value <= INITIAL;

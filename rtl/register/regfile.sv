@@ -23,8 +23,6 @@ module regfile(
     assign rs1_data = (rs1_addr == 5'd0) ? 32'd0 : register[rs1_addr];
     assign rs2_data = (rs2_addr == 5'd0) ? 32'd0 : register[rs2_addr];
 
-    inital register[0] = 32'b0;
-
     always_ff@(posedge clock)
         if (write_enable)
             if (rd_addr != 5'b0)

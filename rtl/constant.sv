@@ -42,3 +42,13 @@
 `define FUNCT3_ALU_SLL          3'b001
 `define FUNCT3_ALU_SHIFTER      3'b101
 `define FUNCT3_ALU_SLTU         3'b011
+
+// RV32I instruction opcodes (inst[6:0])
+`define OPCODE_LOAD             7'b0000011
+`define OPCODE_OP_IMM           7'b0010011
+`define OPCODE_AUIPC            7'b0010111
+`define OPCODE_STORE            7'b0100011
+`define OPCODE_LUI              7'b0110111
+`define OPCODE_BRANCH           7'b1100011
+`define OPCODE_JALR             7'b1100111
+`define OPCODE_JAL              7'b1101111
