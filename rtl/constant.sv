@@ -44,6 +44,7 @@
 `define FUNCT3_ALU_SLTU         3'b011
 
 // RV32I instruction opcodes (inst[6:0])
+`define OPCODE_OP               7'b0110011
 `define OPCODE_LOAD             7'b0000011
 `define OPCODE_OP_IMM           7'b0010011
 `define OPCODE_AUIPC            7'b0010111

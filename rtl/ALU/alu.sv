@@ -4,7 +4,6 @@
 // Date: 2026-11-10
 // author: inefable
 `include "constant.sv"
-`include "alu_ctrl.sv"
 
 module alu(
     input  logic     [31:0]  a,
