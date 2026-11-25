@@ -42,23 +42,7 @@ module cpu_top(
     // IF：指令存储器需要在当前拍结束前返回 PC 对应的指令字。
     assign imem_addr = pc;
 
-    // ID：主译码负责选择指令类别和操作数来源，alu_ctrl 负责细分运算。
-    always_comb begin
-        id_alu_op_type = `CTL_ALU_ROP;
-        id_alu_src_imm = 1'b0;
-        id_supported = 1'b0;
-
-        case (if_id_inst[6:0])
-            `OPCODE_OP: id_supported = 1'b1;
-            `OPCODE_OP_IMM: begin
-                id_alu_op_type = `CTL_ALU_IOP;
-                id_alu_src_imm = 1'b1;
-                id_supported = 1'b1;
-            end
-            default: id_supported = 1'b0;
-        endcase
-    end
-
+    // ID：主译码负责选择指令类别和操作数来源，alu_ctrl 负责细分运算，main_ctrl判断opcode部分是否进入R/I指令
     regfile u_regfile (
         .clock        (clk),
         .write_enable (wb_write_enable),
@@ -80,6 +64,13 @@ module cpu_top(
         .funct3      (if_id_inst[14:12]),
         .alu_op_type (id_alu_op_type),
         .alu_funct   (id_alu_funct)
+    );
+
+    main_ctrl u_main_ctrl(
+        .opcode      (if_id_inst[6:0]),
+        .alu_op_type (id_alu_op_type),
+        .alu_src_num (id_alu_src_imm),
+        .reg_write   (id_supported)
     );
 
     // EX：第一操作数固定取 rs1，第二操作数在立即数和 rs2 之间选择。
