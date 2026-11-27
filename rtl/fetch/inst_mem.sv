@@ -5,7 +5,7 @@
 // author: inefable
 
 module inst_mem #(
-    parameter int unsigned DEPTH_WORDS = 64,
+    parameter int unsigned DEPTH_WORDS = 64,    //支持的指令总数
     parameter INIT_FILE = "sim/program.hex"
 ) (
     input  logic [31:0] addr,

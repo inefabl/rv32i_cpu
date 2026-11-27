@@ -1,0 +1,12 @@
++incdir+rtl
+rtl/ALU/alu.sv
+rtl/ALU/alu_ctrl.sv
+rtl/decode/main_ctrl.sv
+rtl/decode/imme_gene_rator.sv
+rtl/register/regfile.sv
+rtl/register/reg_IFID.sv
+rtl/register/reg_IDEX.sv
+rtl/register/reg_EXWB.sv
+rtl/fetch/inst_mem.sv
+rtl/cpu_top.sv
+rtl/test_bench/tb_cpu.sv

@@ -16,7 +16,7 @@ module main_ctrl(
 
     always_comb begin
         alu_op_type = `CTL_ALU_ROP;
-        alu_src_imm = 1'b0;
+        alu_src_num = 1'b0;
         reg_write = 1'b0;
 
         case (opcode)

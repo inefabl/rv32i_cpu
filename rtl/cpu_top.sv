@@ -132,19 +132,4 @@ module cpu_top(
         end
     end
 
-//级间寄存器
-    //IF/ID
-    always_ff @(posedge clk or posedge rst) begin
-    
-    end
-
-    //ID/EX
-    always_ff @(posedge clk or posedge rst) begin
-    
-    end
-
-    //EX/WB
-    always_ff @(posedge clk or posedge rst) begin
-    
-    end
 endmodule
